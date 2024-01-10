@@ -26,8 +26,7 @@ app.get("/api/hello", function (req, res) {
 
 app.get("/api/whoami", function (req, res) {
     const headers = req.rawHeaders;
-    console.log(headers.length);
-    res.json({
+    return res.json({
         ipaddress: headers[1].toString(),
         language: headers[31].toString(),
         software: headers[15].toString(),
